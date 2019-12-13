@@ -33,7 +33,7 @@ function reveal(gi) {
     let r = 0;
     let pos = [Math.trunc(gi.id / grid.length), gi.id % grid.length];
 
-    if (parseInt(grid[pos[0]][pos[1]].innerHTML) <= 0) {
+    if (grid[pos[0]][pos[1]].innerHTML.length <= 0) {
         // horizontal (left, right)
         for (let i = pos[1] - 1; i < pos[1] + 2; i++) {
             if (i === pos[1] || i < 0 || i >= grid.length) {
